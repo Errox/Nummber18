@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="https://svn.nmap.org/nmap/docs/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.25BETA1 scan initiated Sun Jan 28 14:16:52 2018 as: nmap -O -&#45;reason -&#45;webxml -&#45;traceroute -sS -sV -sC -Pn -n -v -F -oA nummer18.nl./nmap/52.58.204.124 52.58.204.124 -->
+<nmaprun scanner="nmap" args="nmap -O -&#45;reason -&#45;webxml -&#45;traceroute -sS -sV -sC -Pn -n -v -F -oA nummer18.nl./nmap/52.58.204.124 52.58.204.124" start="1517167012" startstr="Sun Jan 28 14:16:52 2018" version="7.25BETA1" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1517167013"/>
+<taskend task="NSE" time="1517167013"/>
+<taskbegin task="NSE" time="1517167013"/>
+<taskend task="NSE" time="1517167013"/>
+<taskbegin task="SYN Stealth Scan" time="1517167013"/>
+<taskend task="SYN Stealth Scan" time="1517167026" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1517167026"/>
+<taskend task="Service scan" time="1517167054" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1517167060"/>
+<taskend task="Traceroute" time="1517167062"/>
+<taskbegin task="NSE" time="1517167062"/>
+<taskend task="NSE" time="1517167095"/>
+<taskbegin task="NSE" time="1517167095"/>
+<taskend task="NSE" time="1517167095"/>
+<host starttime="1517167013" endtime="1517167095"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="52.58.204.124" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-responses" count="94"/>
+</extraports>
+<port protocol="tcp" portid="25"><state state="closed" reason="reset" reason_ttl="255"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" product="PowerDNS" version="4.0.5" method="probed" conf="10"><cpe>cpe:/a:powerdns:powerdns:4.0.5</cpe></service><script id="dns-nsid" output="&#xa;  NSID: frontend03.sylconia.nl (66726f6e74656e6430332e73796c636f6e69612e6e6c)&#xa;  id.server: frontend03.sylconia.nl&#xa;  bind.version: PowerDNS Authoritative Server 4.0.5 (built Nov 27 2017 13:24:40 by root@cab2a2434e74)"><table key="NSID">
+<elem key="raw">frontend03.sylconia.nl</elem>
+<elem key="hex">66726f6e74656e6430332e73796c636f6e69612e6e6c</elem>
+</table>
+<elem key="id.server">frontend03.sylconia.nl</elem>
+<elem key="bind.version">PowerDNS Authoritative Server 4.0.5 (built Nov 27 2017 13:24:40 by root@cab2a2434e74)</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3" hostname="frontend03.sylconia.nl" servicefp="SF-Port110-TCP:V=7.25BETA1%I=7%D=1/28%Time=5A6E21B8%P=x86_64-pc-linux-gnu%r(NULL,94,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;3276070697543290570\.1517166900@frontend03\.sylconia\.nl&gt;\r\n&quot;)%r(GenericLines,CA,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;3276070697543290570\.1517166900@frontend03\.sylconia\.nl&gt;\r\n-ERR\x20Unrecognized\x20command\r\n-ERR\x20Unrecognized\x20command\r\n&quot;)%r(HTTPOptions,CB,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;10288645053158720260\.1517166911@frontend03\.sylconia\.nl&gt;\r\n-ERR\x20Unrecognized\x20command\r\n-ERR\x20Unrecognized\x20command\r\n&quot;);" method="probed" conf="10"/><script id="pop3-capabilities" output="EXPIRE(NEVER) TOP UIDL SASL(PLAIN) IMPLEMENTATION(Cyrus POP3 Murder v2) PIPELINING USER AUTH-RESP-CODE LOGIN-DELAY(0) RESP-CODES STLS APOP"/><script id="ssl-cert" output="Subject: commonName=mail.sylconia.nl&#xa;Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2017-03-14T00:00:00&#xa;Not valid after:  2019-04-13T23:59:59&#xa;MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42&#xa;SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d"><table key="subject">
+<elem key="commonName">mail.sylconia.nl</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">GeoTrust Inc.</elem>
+<elem key="commonName">RapidSSL SHA256 CA</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x2876588</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2017-03-14T00:00:00</elem>
+<elem key="notAfter">2019-04-13T23:59:59</elem>
+</table>
+<elem key="md5">99d6ed456a4687fcbe81c42e6987fb42</elem>
+<elem key="sha1">156e5d2edbd6ee3b3c2a579c501ed8b5f50bc12d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIF3jCCBMagAwIBAgIQc/jX1UBGn0FS5SJUoe3KMDANBgkqhkiG9w0BAQsFADBC&#xa;MQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEbMBkGA1UEAxMS&#xa;UmFwaWRTU0wgU0hBMjU2IENBMB4XDTE3MDMxNDAwMDAwMFoXDTE5MDQxMzIzNTk1&#xa;OVowGzEZMBcGA1UEAwwQbWFpbC5zeWxjb25pYS5ubDCCASIwDQYJKoZIhvcNAQEB&#xa;BQADggEPADCCAQoCggEBANE/10p1DMGNPaPzYhaKByNnmvRUQ8bK+Njpz4HdWfBX&#xa;mAt2goEsR/sasV91RhVCIYQ8Ki85YsVgkzWNYlIUwkHIdeSS7wSgn/qvGBOTO+ki&#xa;NxIm9y6/7hRIBsdDi6TZErn1vWDUQkIPtJnnJYR+UMDsZ6PKBZpSSb8XpQHk06AO&#xa;iwFrS8YSM3CcRhtWXxD6OiGMPRZqJFagFp4+92iSHR7nwLpvq2NrMroB/tspQVRU&#xa;4Jq3IosR4Knl/MFSJfczp+5AsiYIg5tAg2mEBgBoGKyVc7iAJKyD+DkpbdzOF7tp&#xa;mAGQtxKVkmv4Wl7sbQc2+zgd8j4EmxlLWXPmKNmfNgUCAwEAAaOCAvUwggLxMBsG&#xa;A1UdEQQUMBKCEG1haWwuc3lsY29uaWEubmwwCQYDVR0TBAIwADArBgNVHR8EJDAi&#xa;MCCgHqAchhpodHRwOi8vZ3Auc3ltY2IuY29tL2dwLmNybDBvBgNVHSAEaDBmMGQG&#xa;BmeBDAECATBaMCoGCCsGAQUFBwIBFh5odHRwczovL3d3dy5yYXBpZHNzbC5jb20v&#xa;bGVnYWwwLAYIKwYBBQUHAgIwIAweaHR0cHM6Ly93d3cucmFwaWRzc2wuY29tL2xl&#xa;Z2FsMB8GA1UdIwQYMBaAFJfCJ1CewsnsDIgyyHyt4qYBT9pvMA4GA1UdDwEB/wQE&#xa;AwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwVwYIKwYBBQUHAQEE&#xa;SzBJMB8GCCsGAQUFBzABhhNodHRwOi8vZ3Auc3ltY2QuY29tMCYGCCsGAQUFBzAC&#xa;hhpodHRwOi8vZ3Auc3ltY2IuY29tL2dwLmNydDCCAX4GCisGAQQB1nkCBAIEggFu&#xa;BIIBagFoAHUA3esdK3oNT6Ygi4GtgWhwfi6OnQHVXIiNPRHEzbbsvswAAAFay8t4&#xa;GQAABAMARjBEAiBKFl7aVnC/4ehOvH3FnYra7c1wJEoWVB7+VBGxsGEnRwIgQ2Nm&#xa;DCOL0oBjqqUJw2ady8YKliov0JNtNgeToLau3IgAdwCkuQmQtBhYFIe7E6LMZ3AK&#xa;PDWYBPkb37jjd80OyA3cEAAAAVrLy3hbAAAEAwBIMEYCIQDY01gn5TTgGjuTEWJs&#xa;+nCPW8/fBanzhWKD88nLt02uywIhAOGSrvCI1Xijw5zwcm7FWq1JwSmfH0Wo1Zux&#xa;dBs8pDuEAHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFay8t6&#xa;GgAABAMARzBFAiB4Ilp51Yp6CQar7WBfuGYcR/zwc2zzFjX6rdxpzGGCuwIhAJRA&#xa;a0okO9Uoi9Im0B8Uh8LGNomAFv/WeLYTWSmBDjF7MA0GCSqGSIb3DQEBCwUAA4IB&#xa;AQB/UoqHglv3SQAgeXyMgU/XErCYk8kpDBctHxVFHBFjbnr0oOzba6wNnoUZnlQ0&#xa;VecEIHvShu2jFCfzqLA2KjeLlIKvF3jYxDhT5YiOwqfX1XL94v1TQMZSJajJpi3i&#xa;bVSaibVceOGKrmJehzS9XX7i6TWivMDOo0tKkepWNA0sRA88rGLKUknpzn/lwXaJ&#xa;5Y/seLWD772w1vHB4m+EgpMYSp46NNCD4q9fsMqtIxKkkeBd9mNQ/jmZxp5j2v8g&#xa;UPmuhHIW11SUrQ6GVRxXVpsJ1lkm0njjrsI7V83Qbyh+SWufOXlco9yMza/DZOgN&#xa;OQ8SeGM5m2aQKYEqCFzVtE2C&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Cyrus Murder imapd" version="2.4.17-Fedora-RPM-2.4.17-13.el7" hostname="frontend03.sylconia.nl" method="probed" conf="10"><cpe>cpe:/a:cmu:cyrus_imap_server:2.4.17-fedora-rpm-2.4.17-13.el7</cpe></service><script id="imap-capabilities" output="ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE IDLEA0001 OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY COMPRESS=DEFLATE MAILBOX-REFERRALS ENABLE STARTTLS SASL-IR AUTH=PLAIN QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY"/><script id="ssl-cert" output="Subject: commonName=mail.sylconia.nl&#xa;Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2017-03-14T00:00:00&#xa;Not valid after:  2019-04-13T23:59:59&#xa;MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42&#xa;SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d"><table key="subject">
+<elem key="commonName">mail.sylconia.nl</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">GeoTrust Inc.</elem>
+<elem key="commonName">RapidSSL SHA256 CA</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x22849a8</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2017-03-14T00:00:00</elem>
+<elem key="notAfter">2019-04-13T23:59:59</elem>
+</table>
+<elem key="md5">99d6ed456a4687fcbe81c42e6987fb42</elem>
+<elem key="sha1">156e5d2edbd6ee3b3c2a579c501ed8b5f50bc12d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIF3jCCBMagAwIBAgIQc/jX1UBGn0FS5SJUoe3KMDANBgkqhkiG9w0BAQsFADBC&#xa;MQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEbMBkGA1UEAxMS&#xa;UmFwaWRTU0wgU0hBMjU2IENBMB4XDTE3MDMxNDAwMDAwMFoXDTE5MDQxMzIzNTk1&#xa;OVowGzEZMBcGA1UEAwwQbWFpbC5zeWxjb25pYS5ubDCCASIwDQYJKoZIhvcNAQEB&#xa;BQADggEPADCCAQoCggEBANE/10p1DMGNPaPzYhaKByNnmvRUQ8bK+Njpz4HdWfBX&#xa;mAt2goEsR/sasV91RhVCIYQ8Ki85YsVgkzWNYlIUwkHIdeSS7wSgn/qvGBOTO+ki&#xa;NxIm9y6/7hRIBsdDi6TZErn1vWDUQkIPtJnnJYR+UMDsZ6PKBZpSSb8XpQHk06AO&#xa;iwFrS8YSM3CcRhtWXxD6OiGMPRZqJFagFp4+92iSHR7nwLpvq2NrMroB/tspQVRU&#xa;4Jq3IosR4Knl/MFSJfczp+5AsiYIg5tAg2mEBgBoGKyVc7iAJKyD+DkpbdzOF7tp&#xa;mAGQtxKVkmv4Wl7sbQc2+zgd8j4EmxlLWXPmKNmfNgUCAwEAAaOCAvUwggLxMBsG&#xa;A1UdEQQUMBKCEG1haWwuc3lsY29uaWEubmwwCQYDVR0TBAIwADArBgNVHR8EJDAi&#xa;MCCgHqAchhpodHRwOi8vZ3Auc3ltY2IuY29tL2dwLmNybDBvBgNVHSAEaDBmMGQG&#xa;BmeBDAECATBaMCoGCCsGAQUFBwIBFh5odHRwczovL3d3dy5yYXBpZHNzbC5jb20v&#xa;bGVnYWwwLAYIKwYBBQUHAgIwIAweaHR0cHM6Ly93d3cucmFwaWRzc2wuY29tL2xl&#xa;Z2FsMB8GA1UdIwQYMBaAFJfCJ1CewsnsDIgyyHyt4qYBT9pvMA4GA1UdDwEB/wQE&#xa;AwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwVwYIKwYBBQUHAQEE&#xa;SzBJMB8GCCsGAQUFBzABhhNodHRwOi8vZ3Auc3ltY2QuY29tMCYGCCsGAQUFBzAC&#xa;hhpodHRwOi8vZ3Auc3ltY2IuY29tL2dwLmNydDCCAX4GCisGAQQB1nkCBAIEggFu&#xa;BIIBagFoAHUA3esdK3oNT6Ygi4GtgWhwfi6OnQHVXIiNPRHEzbbsvswAAAFay8t4&#xa;GQAABAMARjBEAiBKFl7aVnC/4ehOvH3FnYra7c1wJEoWVB7+VBGxsGEnRwIgQ2Nm&#xa;DCOL0oBjqqUJw2ady8YKliov0JNtNgeToLau3IgAdwCkuQmQtBhYFIe7E6LMZ3AK&#xa;PDWYBPkb37jjd80OyA3cEAAAAVrLy3hbAAAEAwBIMEYCIQDY01gn5TTgGjuTEWJs&#xa;+nCPW8/fBanzhWKD88nLt02uywIhAOGSrvCI1Xijw5zwcm7FWq1JwSmfH0Wo1Zux&#xa;dBs8pDuEAHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFay8t6&#xa;GgAABAMARzBFAiB4Ilp51Yp6CQar7WBfuGYcR/zwc2zzFjX6rdxpzGGCuwIhAJRA&#xa;a0okO9Uoi9Im0B8Uh8LGNomAFv/WeLYTWSmBDjF7MA0GCSqGSIb3DQEBCwUAA4IB&#xa;AQB/UoqHglv3SQAgeXyMgU/XErCYk8kpDBctHxVFHBFjbnr0oOzba6wNnoUZnlQ0&#xa;VecEIHvShu2jFCfzqLA2KjeLlIKvF3jYxDhT5YiOwqfX1XL94v1TQMZSJajJpi3i&#xa;bVSaibVceOGKrmJehzS9XX7i6TWivMDOo0tKkepWNA0sRA88rGLKUknpzn/lwXaJ&#xa;5Y/seLWD772w1vHB4m+EgpMYSp46NNCD4q9fsMqtIxKkkeBd9mNQ/jmZxp5j2v8g&#xa;UPmuhHIW11SUrQ6GVRxXVpsJ1lkm0njjrsI7V83Qbyh+SWufOXlco9yMza/DZOgN&#xa;OQ8SeGM5m2aQKYEqCFzVtE2C&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Cyrus Murder imapd" version="2.4.17-Fedora-RPM-2.4.17-13.el7" hostname="frontend03.sylconia.nl" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:cmu:cyrus_imap_server:2.4.17-fedora-rpm-2.4.17-13.el7</cpe></service><script id="imap-capabilities" output="ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY IDLEA0001 MAILBOX-REFERRALS ENABLE AUTH=PLAIN COMPRESS=DEFLATE SASL-IR QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY"/><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3" hostname="frontend03.sylconia.nl" servicefp="SF-Port995-TCP:V=7.25BETA1%T=SSL%I=7%D=1/28%Time=5A6E21BE%P=x86_64-pc-linux-gnu%r(NULL,94,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;6534479781883315276\.1517166906@frontend03\.sylconia\.nl&gt;\r\n&quot;)%r(GenericLines,CA,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;6534479781883315276\.1517166906@frontend03\.sylconia\.nl&gt;\r\n-ERR\x20Unrecognized\x20command\r\n-ERR\x20Unrecognized\x20command\r\n&quot;)%r(GetRequest,CA,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;7300369327572028730\.1517166918@frontend03\.sylconia\.nl&gt;\r\n-ERR\x20Unrecognized\x20command\r\n-ERR\x20Unrecognized\x20command\r\n&quot;)%r(HTTPOptions,CB,&quot;\+OK\x20frontend03\.sylconia\.nl\x20Cyrus\x20POP3\x20Murder\x20v2\.4\.17-Fedora-RPM-2\.4\.17-13\.el7\x20server\x20ready\x20&lt;10891112077713802807\.1517166923@frontend03\.sylconia\.nl&gt;\r\n-ERR\x20Unrecognized\x20command\r\n-ERR\x20Unrecognized\x20command\r\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="pop3-capabilities" output="EXPIRE(NEVER) TOP RESP-CODES SASL(PLAIN) PIPELINING IMPLEMENTATION(Cyrus POP3 Murder v2) USER APOP AUTH-RESP-CODE UIDL LOGIN-DELAY(0)"/><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="53"/>
+<portused state="closed" proto="tcp" portid="25"/>
+<osmatch name="QEMU user mode network gateway" accuracy="100" line="85958">
+<osclass type="general purpose" vendor="QEMU" osfamily="QEMU" accuracy="100"><cpe>cpe:/a:qemu:qemu</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="17" difficulty="Good luck!" values="2206F001,2207EA01,2208E401,2209DE01,220BD201,220CCC01"/>
+<ipidsequence class="Incremental" values="8699,869A,869B,869C,869D,869E"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="25" proto="tcp">
+<hop ttl="1" ipaddr="10.0.2.2" rtt="0.68"/>
+<hop ttl="2" ipaddr="52.58.204.124" rtt="335.25"/>
+</trace>
+<times srtt="205452" rttvar="152249" to="814448"/>
+</host>
+<taskbegin task="NSE" time="1517167095"/>
+<taskend task="NSE" time="1517167095"/>
+<taskbegin task="NSE" time="1517167095"/>
+<taskend task="NSE" time="1517167095"/>
+<runstats><finished time="1517167095" timestr="Sun Jan 28 14:18:15 2018" elapsed="82.83" summary="Nmap done at Sun Jan 28 14:18:15 2018; 1 IP address (1 host up) scanned in 82.83 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

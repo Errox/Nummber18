@@ -1,0 +1,53 @@
+# Nmap 7.25BETA1 scan initiated Sun Jan 28 14:16:07 2018 as: nmap -O --reason --webxml --traceroute -sS -sV -sC -Pn -n -v -F -oA nummer18.nl./nmap/18.194.50.166 18.194.50.166
+Nmap scan report for 18.194.50.166
+Host is up, received user-set (0.26s latency).
+Not shown: 91 filtered ports
+Reason: 91 no-responses
+PORT     STATE  SERVICE      REASON         VERSION
+21/tcp   open   ftp          syn-ack ttl 64 ProFTPD or KnFTPD
+25/tcp   closed smtp         reset ttl 255
+80/tcp   open   http         syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+| http-methods: 
+|   Supported Methods: POST OPTIONS GET HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|_http-title: Site doesn't have a title.
+443/tcp  open   ssl/http     syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+|_http-favicon: Unknown favicon MD5: 449C713AF73E6EEF939290E189E3C511
+| http-methods: 
+|   Supported Methods: POST OPTIONS GET HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| ssl-cert: Subject: commonName=www.clickinsight.info
+| Issuer: commonName=Let's Encrypt Authority X3/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-01-21T01:30:23
+| Not valid after:  2018-04-21T01:30:23
+| MD5:   7e95 0366 6663 f485 6897 e9ef 2256 8177
+|_SHA-1: 3f11 d9c3 1415 3ad1 53ba 5cca 36e2 0c41 d22a 5c93
+|_ssl-date: TLS randomness does not represent time
+1025/tcp closed NFS-or-IIS   reset ttl 255
+1026/tcp closed LSA-or-nterm reset ttl 255
+1027/tcp closed IIS          reset ttl 255
+1028/tcp closed unknown      reset ttl 255
+1029/tcp closed ms-lsa       reset ttl 255
+Device type: general purpose
+Running: QEMU
+OS CPE: cpe:/a:qemu:qemu
+OS details: QEMU user mode network gateway
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=17 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Unix
+
+TRACEROUTE (using port 25/tcp)
+HOP RTT       ADDRESS
+1   0.83 ms   10.0.2.2
+2   270.17 ms 18.194.50.166
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 28 14:16:52 2018 -- 1 IP address (1 host up) scanned in 45.43 seconds

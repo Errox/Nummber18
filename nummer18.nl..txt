@@ -1,0 +1,331 @@
+Analysing domain : nummer18.nl.
+	Output directory name: nummer18.nl.
+	Output summary file: nummer18.nl./nummer18.nl..txt
+	Checking NameServers using system default resolver...
+		IP: 52.28.174.166 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-28-174-166.eu-central-1.compute.amazonaws.com			Type: PTR
+		IP: 52.58.204.124 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-58-204-124.eu-central-1.compute.amazonaws.com			Type: PTR
+		IP: 52.58.204.124 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-58-204-124.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+		IP: 52.28.174.166 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-28-174-166.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+		IP: 52.58.204.124 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-58-204-124.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+		IP: 52.28.174.166 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-28-174-166.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+
+	Checking MailServers using system default resolver...
+		IP: 52.28.64.246 (Germany)
+			HostName: mail3.sylconia.nl			Type: MX
+			HostName: ec2-52-28-64-246.eu-central-1.compute.amazonaws.com			Type: PTR
+		IP: 52.29.149.145 (Germany)
+			HostName: mail3.sylconia.nl			Type: MX
+			HostName: ec2-52-29-149-145.eu-central-1.compute.amazonaws.com			Type: PTR
+
+	Checking the zone transfer for each NS... (if this takes more than 10 seconds, just hit CTRL-C and it will continue. Bug in the libs)
+		No zone transfer found on nameserver 52.28.174.166
+		No zone transfer found on nameserver 52.28.174.166
+		No zone transfer found on nameserver 52.28.174.166
+		No zone transfer found on nameserver 52.58.204.124
+		No zone transfer found on nameserver 52.58.204.124
+		No zone transfer found on nameserver 52.58.204.124
+
+	Checking SPF record...
+		No SPF record
+
+	Checking 192 most common hostnames using system default resolver...
+		IP: 18.194.50.166 (United States)
+			HostName: www.nummer18.nl.			Type: A
+		IP: 18.194.50.166 (United States)
+			HostName: www.nummer18.nl.			Type: A
+			HostName: ftp.nummer18.nl.			Type: A
+			HostName: ec2-18-194-50-166.eu-central-1.compute.amazonaws.com			Type: PTR
+		IP: 52.58.204.124 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-58-204-124.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+			HostName: mail.nummer18.nl.			Type: A
+		IP: 52.28.174.166 (Germany)
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-28-174-166.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+			HostName: mail.nummer18.nl.			Type: A
+
+	Checking with nmap the reverse DNS hostnames of every <ip>/24 netblock using system default resolver...
+		Checking netblock 52.29.149.0
+		Checking netblock 52.28.174.0
+		Checking netblock 18.194.50.0
+		Checking netblock 52.58.204.0
+		Checking netblock 52.28.64.0
+
+	Searching for nummer18.nl. emails in Google
+		alex@nummer18.nl.
+	Checking 5 active hosts using nmap... (nmap -sn -n -v -PP -PM -PS80,25 -PA -PY -PU53,40125 -PE --reason <ip> -oA <output_directory>/nmap/<ip>.sn)
+		Host 52.29.149.145 is up (reset ttl 255)
+		Host 52.28.174.166 is up (reset ttl 255)
+		Host 18.194.50.166 is up (syn-ack ttl 64)
+		Host 52.58.204.124 is up (reset ttl 255)
+		Host 52.28.64.246 is up (reset ttl 255)
+
+	Checking ports on every active host using nmap... (nmap -O --reason --webxml --traceroute -sS -sV -sC -Pn -n -v -F  <ip> -oA <output_directory>/nmap/<ip>)
+		Scanning ip 52.29.149.145 (ec2-52-29-149-145.eu-central-1.compute.amazonaws.com (PTR)):
+		Scanning ip 52.28.174.166 (mail.nummer18.nl.):
+			53/tcp  open   domain   syn-ack ttl 64 PowerDNS 4.0.4
+				| dns-nsid: 
+				|   NSID: frontend01.sylconia.nl (66726f6e74656e6430312e73796c636f6e69612e6e6c)
+				|   id.server: frontend01.sylconia.nl
+				|_  bind.version: PowerDNS Authoritative Server 4.0.4 (built Jun 22 2017 20:33:52 by buildbot@6f7b6bc10f0f)
+			110/tcp open   pop3     syn-ack ttl 64
+				|_pop3-capabilities: APOP STLS PIPELINING USER RESP-CODES IMPLEMENTATION(Cyrus POP3 Murder v2) AUTH-RESP-CODE EXPIRE(NEVER) SASL(PLAIN) TOP UIDL LOGIN-DELAY(0)
+				| ssl-cert: Subject: commonName=mail.sylconia.nl
+				| Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				| Public Key type: rsa
+				| Public Key bits: 2048
+				| Signature Algorithm: sha256WithRSAEncryption
+				| Not valid before: 2017-03-14T00:00:00
+				| Not valid after:  2019-04-13T23:59:59
+				| MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				|_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				|_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			143/tcp open   imap     syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-8.el7_1
+				|_imap-capabilities: ACL MAILBOX-REFERRALS MUPDATE=mupdate URLAUTH=BINARY COMPRESS=DEFLATE WITHIN STARTTLS THREAD=REFERENCES QRESYNC ID ESEARCH SASL-IR UNSELECT IMAP4rev1 CATENATE BINARY UIDPLUS SORT=DISPLAY Completed OK IDLEA0001 CHILDREN AUTH=PLAIN URLAUTH SORT=MODSEQ XLIST RENAME frontend01-mail THREAD=ORDEREDSUBJECT X-NETSCAPE SCAN SORT ENABLE ATOMIC LIST-EXTENDED NAMESPACE ANNOTATEMORE NO LITERAL+ CONDSTORE RIGHTS=kxte MULTIAPPEND QUOTA
+				| ssl-cert: Subject: commonName=mail.sylconia.nl
+				| Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				| Public Key type: rsa
+				| Public Key bits: 2048
+				| Signature Algorithm: sha256WithRSAEncryption
+				| Not valid before: 2017-03-14T00:00:00
+				| Not valid after:  2019-04-13T23:59:59
+				| MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				|_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				|_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			993/tcp open   ssl/imap syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-8.el7_1
+				|_imap-capabilities: ACL MAILBOX-REFERRALS MUPDATE=mupdate URLAUTH=BINARY COMPRESS=DEFLATE WITHIN THREAD=REFERENCES QRESYNC ID ESEARCH SASL-IR UNSELECT IMAP4rev1 CATENATE BINARY UIDPLUS SORT=DISPLAY Completed OK IDLEA0001 CHILDREN AUTH=PLAIN URLAUTH SORT=MODSEQ XLIST RENAME frontend01-mail THREAD=ORDEREDSUBJECT X-NETSCAPE SCAN SORT ENABLE ATOMIC LIST-EXTENDED NAMESPACE ANNOTATEMORE NO LITERAL+ CONDSTORE RIGHTS=kxte MULTIAPPEND QUOTA
+				|_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			995/tcp open   ssl/pop3 syn-ack ttl 64
+				|_pop3-capabilities: APOP UIDL PIPELINING RESP-CODES IMPLEMENTATION(Cyrus POP3 Murder v2) USER AUTH-RESP-CODE SASL(PLAIN) TOP EXPIRE(NEVER) LOGIN-DELAY(0)
+				|_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			OS Info: Service Info: Host: frontend01.sylconia.nl
+		Scanning ip 18.194.50.166 (ec2-18-194-50-166.eu-central-1.compute.amazonaws.com (PTR)):
+			21/tcp   open   ftp          syn-ack ttl 64 ProFTPD or KnFTPD
+			80/tcp   open   http         syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+				| http-methods: 
+				|   Supported Methods: POST OPTIONS GET HEAD TRACE
+				|_  Potentially risky methods: TRACE
+				|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+				|_http-title: Site doesn't have a title.
+			443/tcp  open   ssl/http     syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+				|_http-favicon: Unknown favicon MD5: 449C713AF73E6EEF939290E189E3C511
+				| http-methods: 
+				|   Supported Methods: POST OPTIONS GET HEAD TRACE
+				|_  Potentially risky methods: TRACE
+				|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+				|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+				| ssl-cert: Subject: commonName=www.clickinsight.info
+				| Issuer: commonName=Let's Encrypt Authority X3/organizationName=Let's Encrypt/countryName=US
+				| Public Key type: rsa
+				| Public Key bits: 2048
+				| Signature Algorithm: sha256WithRSAEncryption
+				| Not valid before: 2018-01-21T01:30:23
+				| Not valid after:  2018-04-21T01:30:23
+				| MD5:   7e95 0366 6663 f485 6897 e9ef 2256 8177
+				|_SHA-1: 3f11 d9c3 1415 3ad1 53ba 5cca 36e2 0c41 d22a 5c93
+				|_ssl-date: TLS randomness does not represent time
+			OS Info: Service Info: OS: Unix
+		Scanning ip 52.58.204.124 (mail.nummer18.nl.):
+			53/tcp  open   domain   syn-ack ttl 64 PowerDNS 4.0.5
+				| dns-nsid: 
+				|   NSID: frontend03.sylconia.nl (66726f6e74656e6430332e73796c636f6e69612e6e6c)
+				|   id.server: frontend03.sylconia.nl
+				|_  bind.version: PowerDNS Authoritative Server 4.0.5 (built Nov 27 2017 13:24:40 by root@cab2a2434e74)
+			110/tcp open   pop3     syn-ack ttl 64
+				|_pop3-capabilities: EXPIRE(NEVER) TOP UIDL SASL(PLAIN) IMPLEMENTATION(Cyrus POP3 Murder v2) PIPELINING USER AUTH-RESP-CODE LOGIN-DELAY(0) RESP-CODES STLS APOP
+				| ssl-cert: Subject: commonName=mail.sylconia.nl
+				| Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				| Public Key type: rsa
+				| Public Key bits: 2048
+				| Signature Algorithm: sha256WithRSAEncryption
+				| Not valid before: 2017-03-14T00:00:00
+				| Not valid after:  2019-04-13T23:59:59
+				| MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				|_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				|_ssl-date: TLS randomness does not represent time
+			143/tcp open   imap     syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-13.el7
+				|_imap-capabilities: ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE IDLEA0001 OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY COMPRESS=DEFLATE MAILBOX-REFERRALS ENABLE STARTTLS SASL-IR AUTH=PLAIN QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY
+				| ssl-cert: Subject: commonName=mail.sylconia.nl
+				| Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				| Public Key type: rsa
+				| Public Key bits: 2048
+				| Signature Algorithm: sha256WithRSAEncryption
+				| Not valid before: 2017-03-14T00:00:00
+				| Not valid after:  2019-04-13T23:59:59
+				| MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				|_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				|_ssl-date: TLS randomness does not represent time
+			993/tcp open   ssl/imap syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-13.el7
+				|_imap-capabilities: ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY IDLEA0001 MAILBOX-REFERRALS ENABLE AUTH=PLAIN COMPRESS=DEFLATE SASL-IR QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY
+				|_ssl-date: TLS randomness does not represent time
+			995/tcp open   ssl/pop3 syn-ack ttl 64
+				|_pop3-capabilities: EXPIRE(NEVER) TOP RESP-CODES SASL(PLAIN) PIPELINING IMPLEMENTATION(Cyrus POP3 Murder v2) USER APOP AUTH-RESP-CODE UIDL LOGIN-DELAY(0)
+				|_ssl-date: TLS randomness does not represent time
+			OS Info: Service Info: Host: frontend03.sylconia.nl
+		Scanning ip 52.28.64.246 (ec2-52-28-64-246.eu-central-1.compute.amazonaws.com (PTR)):
+	WebCrawling domain's web servers... up to 50 max links.
+
+
+--Finished--
+Summary information for domain nummer18.nl.
+-----------------------------------------
+	Domain Specific Information:
+		Email: alex@nummer18.nl.
+
+	Domain Ips Information:
+		IP: 52.29.149.145
+			HostName: mail3.sylconia.nl			Type: MX
+			HostName: ec2-52-29-149-145.eu-central-1.compute.amazonaws.com			Type: PTR
+			Country: Germany
+			Is Active: True (reset ttl 255)
+		IP: 52.28.174.166
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-28-174-166.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+			HostName: mail.nummer18.nl.			Type: A
+			Country: Germany
+			Is Active: True (reset ttl 255)
+			Port: 53/tcp  open   domain   syn-ack ttl 64 PowerDNS 4.0.4
+				Script Info: | dns-nsid: 
+				Script Info: |   NSID: frontend01.sylconia.nl (66726f6e74656e6430312e73796c636f6e69612e6e6c)
+				Script Info: |   id.server: frontend01.sylconia.nl
+				Script Info: |_  bind.version: PowerDNS Authoritative Server 4.0.4 (built Jun 22 2017 20:33:52 by buildbot@6f7b6bc10f0f)
+			Port: 110/tcp open   pop3     syn-ack ttl 64
+				Script Info: |_pop3-capabilities: APOP STLS PIPELINING USER RESP-CODES IMPLEMENTATION(Cyrus POP3 Murder v2) AUTH-RESP-CODE EXPIRE(NEVER) SASL(PLAIN) TOP UIDL LOGIN-DELAY(0)
+				Script Info: | ssl-cert: Subject: commonName=mail.sylconia.nl
+				Script Info: | Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				Script Info: | Public Key type: rsa
+				Script Info: | Public Key bits: 2048
+				Script Info: | Signature Algorithm: sha256WithRSAEncryption
+				Script Info: | Not valid before: 2017-03-14T00:00:00
+				Script Info: | Not valid after:  2019-04-13T23:59:59
+				Script Info: | MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				Script Info: |_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				Script Info: |_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			Port: 143/tcp open   imap     syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-8.el7_1
+				Script Info: |_imap-capabilities: ACL MAILBOX-REFERRALS MUPDATE=mupdate URLAUTH=BINARY COMPRESS=DEFLATE WITHIN STARTTLS THREAD=REFERENCES QRESYNC ID ESEARCH SASL-IR UNSELECT IMAP4rev1 CATENATE BINARY UIDPLUS SORT=DISPLAY Completed OK IDLEA0001 CHILDREN AUTH=PLAIN URLAUTH SORT=MODSEQ XLIST RENAME frontend01-mail THREAD=ORDEREDSUBJECT X-NETSCAPE SCAN SORT ENABLE ATOMIC LIST-EXTENDED NAMESPACE ANNOTATEMORE NO LITERAL+ CONDSTORE RIGHTS=kxte MULTIAPPEND QUOTA
+				Script Info: | ssl-cert: Subject: commonName=mail.sylconia.nl
+				Script Info: | Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				Script Info: | Public Key type: rsa
+				Script Info: | Public Key bits: 2048
+				Script Info: | Signature Algorithm: sha256WithRSAEncryption
+				Script Info: | Not valid before: 2017-03-14T00:00:00
+				Script Info: | Not valid after:  2019-04-13T23:59:59
+				Script Info: | MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				Script Info: |_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				Script Info: |_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			Port: 993/tcp open   ssl/imap syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-8.el7_1
+				Script Info: |_imap-capabilities: ACL MAILBOX-REFERRALS MUPDATE=mupdate URLAUTH=BINARY COMPRESS=DEFLATE WITHIN THREAD=REFERENCES QRESYNC ID ESEARCH SASL-IR UNSELECT IMAP4rev1 CATENATE BINARY UIDPLUS SORT=DISPLAY Completed OK IDLEA0001 CHILDREN AUTH=PLAIN URLAUTH SORT=MODSEQ XLIST RENAME frontend01-mail THREAD=ORDEREDSUBJECT X-NETSCAPE SCAN SORT ENABLE ATOMIC LIST-EXTENDED NAMESPACE ANNOTATEMORE NO LITERAL+ CONDSTORE RIGHTS=kxte MULTIAPPEND QUOTA
+				Script Info: |_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			Port: 995/tcp open   ssl/pop3 syn-ack ttl 64
+				Script Info: |_pop3-capabilities: APOP UIDL PIPELINING RESP-CODES IMPLEMENTATION(Cyrus POP3 Murder v2) USER AUTH-RESP-CODE SASL(PLAIN) TOP EXPIRE(NEVER) LOGIN-DELAY(0)
+				Script Info: |_ssl-date: 2018-01-28T19:15:39+00:00; +2s from scanner time.
+			Os Info:  Host: frontend01.sylconia.nl
+		IP: 18.194.50.166
+			HostName: www.nummer18.nl.			Type: A
+			HostName: ftp.nummer18.nl.			Type: A
+			HostName: ec2-18-194-50-166.eu-central-1.compute.amazonaws.com			Type: PTR
+			Country: United States
+			Is Active: True (syn-ack ttl 64)
+			Port: 21/tcp   open   ftp          syn-ack ttl 64 ProFTPD or KnFTPD
+			Port: 80/tcp   open   http         syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+				Script Info: | http-methods: 
+				Script Info: |   Supported Methods: POST OPTIONS GET HEAD TRACE
+				Script Info: |_  Potentially risky methods: TRACE
+				Script Info: |_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+				Script Info: |_http-title: Site doesn't have a title.
+			Port: 443/tcp  open   ssl/http     syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips)
+				Script Info: |_http-favicon: Unknown favicon MD5: 449C713AF73E6EEF939290E189E3C511
+				Script Info: | http-methods: 
+				Script Info: |   Supported Methods: POST OPTIONS GET HEAD TRACE
+				Script Info: |_  Potentially risky methods: TRACE
+				Script Info: |_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+				Script Info: |_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+				Script Info: | ssl-cert: Subject: commonName=www.clickinsight.info
+				Script Info: | Issuer: commonName=Let's Encrypt Authority X3/organizationName=Let's Encrypt/countryName=US
+				Script Info: | Public Key type: rsa
+				Script Info: | Public Key bits: 2048
+				Script Info: | Signature Algorithm: sha256WithRSAEncryption
+				Script Info: | Not valid before: 2018-01-21T01:30:23
+				Script Info: | Not valid after:  2018-04-21T01:30:23
+				Script Info: | MD5:   7e95 0366 6663 f485 6897 e9ef 2256 8177
+				Script Info: |_SHA-1: 3f11 d9c3 1415 3ad1 53ba 5cca 36e2 0c41 d22a 5c93
+				Script Info: |_ssl-date: TLS randomness does not represent time
+			Os Info:  OS: Unix
+		IP: 52.58.204.124
+			HostName: ns1.sylconia.net			Type: NS
+			HostName: ec2-52-58-204-124.eu-central-1.compute.amazonaws.com			Type: PTR
+			HostName: ns3.sylconia.com			Type: NS
+			HostName: ns2.sylconia.net			Type: NS
+			HostName: mail.nummer18.nl.			Type: A
+			Country: Germany
+			Is Active: True (reset ttl 255)
+			Port: 53/tcp  open   domain   syn-ack ttl 64 PowerDNS 4.0.5
+				Script Info: | dns-nsid: 
+				Script Info: |   NSID: frontend03.sylconia.nl (66726f6e74656e6430332e73796c636f6e69612e6e6c)
+				Script Info: |   id.server: frontend03.sylconia.nl
+				Script Info: |_  bind.version: PowerDNS Authoritative Server 4.0.5 (built Nov 27 2017 13:24:40 by root@cab2a2434e74)
+			Port: 110/tcp open   pop3     syn-ack ttl 64
+				Script Info: |_pop3-capabilities: EXPIRE(NEVER) TOP UIDL SASL(PLAIN) IMPLEMENTATION(Cyrus POP3 Murder v2) PIPELINING USER AUTH-RESP-CODE LOGIN-DELAY(0) RESP-CODES STLS APOP
+				Script Info: | ssl-cert: Subject: commonName=mail.sylconia.nl
+				Script Info: | Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				Script Info: | Public Key type: rsa
+				Script Info: | Public Key bits: 2048
+				Script Info: | Signature Algorithm: sha256WithRSAEncryption
+				Script Info: | Not valid before: 2017-03-14T00:00:00
+				Script Info: | Not valid after:  2019-04-13T23:59:59
+				Script Info: | MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				Script Info: |_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				Script Info: |_ssl-date: TLS randomness does not represent time
+			Port: 143/tcp open   imap     syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-13.el7
+				Script Info: |_imap-capabilities: ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE IDLEA0001 OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY COMPRESS=DEFLATE MAILBOX-REFERRALS ENABLE STARTTLS SASL-IR AUTH=PLAIN QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY
+				Script Info: | ssl-cert: Subject: commonName=mail.sylconia.nl
+				Script Info: | Issuer: commonName=RapidSSL SHA256 CA/organizationName=GeoTrust Inc./countryName=US
+				Script Info: | Public Key type: rsa
+				Script Info: | Public Key bits: 2048
+				Script Info: | Signature Algorithm: sha256WithRSAEncryption
+				Script Info: | Not valid before: 2017-03-14T00:00:00
+				Script Info: | Not valid after:  2019-04-13T23:59:59
+				Script Info: | MD5:   99d6 ed45 6a46 87fc be81 c42e 6987 fb42
+				Script Info: |_SHA-1: 156e 5d2e dbd6 ee3b 3c2a 579c 501e d8b5 f50b c12d
+				Script Info: |_ssl-date: TLS randomness does not represent time
+			Port: 993/tcp open   ssl/imap syn-ack ttl 64 Cyrus Murder imapd 2.4.17-Fedora-RPM-2.4.17-13.el7
+				Script Info: |_imap-capabilities: ATOMIC XLIST NO frontend01-mail RENAME LIST-EXTENDED IMAP4rev1 LITERAL+ WITHIN CATENATE NAMESPACE OK SORT ID ANNOTATEMORE Completed URLAUTH=BINARY IDLEA0001 MAILBOX-REFERRALS ENABLE AUTH=PLAIN COMPRESS=DEFLATE SASL-IR QUOTA THREAD=REFERENCES SORT=MODSEQ ESEARCH MUPDATE=mupdate X-NETSCAPE CONDSTORE CHILDREN THREAD=ORDEREDSUBJECT UNSELECT SCAN ACL QRESYNC UIDPLUS SORT=DISPLAY URLAUTH MULTIAPPEND RIGHTS=kxte BINARY
+				Script Info: |_ssl-date: TLS randomness does not represent time
+			Port: 995/tcp open   ssl/pop3 syn-ack ttl 64
+				Script Info: |_pop3-capabilities: EXPIRE(NEVER) TOP RESP-CODES SASL(PLAIN) PIPELINING IMPLEMENTATION(Cyrus POP3 Murder v2) USER APOP AUTH-RESP-CODE UIDL LOGIN-DELAY(0)
+				Script Info: |_ssl-date: TLS randomness does not represent time
+			Os Info:  Host: frontend03.sylconia.nl
+		IP: 52.28.64.246
+			HostName: mail3.sylconia.nl			Type: MX
+			HostName: ec2-52-28-64-246.eu-central-1.compute.amazonaws.com			Type: PTR
+			Country: Germany
+			Is Active: True (reset ttl 255)
+
+--------------End Summary --------------
+-----------------------------------------
+
+Finding new unrelated domains to analyze with robtex.

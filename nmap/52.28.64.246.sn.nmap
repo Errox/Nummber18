@@ -1,0 +1,5 @@
+# Nmap 7.25BETA1 scan initiated Sun Jan 28 14:13:32 2018 as: nmap -sn -n -v -PP -PM -PS80,25 -PA -PY -PU53,40125 -PE --reason -oA nummer18.nl./nmap/52.28.64.246.sn 52.28.64.246
+Nmap scan report for 52.28.64.246
+Host is up, received reset ttl 255 (1.2s latency).
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Jan 28 14:13:33 2018 -- 1 IP address (1 host up) scanned in 1.24 seconds
